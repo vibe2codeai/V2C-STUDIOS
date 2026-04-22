@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --color-primary-orange: #ff5722;
+  --color-accent-orange: #f4511e;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-slate-900 font-sans antialiased overflow-hidden h-screen;
+  }
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.accent-glow {
+  box-shadow: 0 0 15px rgba(255, 87, 34, 0.2);
+}
+
+@utility speckled-orange {
+  background-color: var(--color-primary-orange);
+  background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+  background-size: 8px 8px;
+}
+
+.stepper-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  @apply bg-slate-200;
+}
+
+.stepper-dot.active {
+  @apply bg-primary-orange;
+  box-shadow: 0 0 8px rgba(255, 87, 34, 0.5);
+}
+
+.option-card {
+  transition: all 0.2s ease;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.option-card:hover {
+  border-color: var(--color-primary-orange);
+  background: rgba(255, 87, 34, 0.05);
+}
+
+.sidebar-label {
+  @apply text-[10px] uppercase font-bold tracking-widest text-slate-500;
+}
+
+.v2c-tag {
+  background: #fff3e0;
+  color: #e65100;
+  @apply px-2 py-1 rounded text-[10px] font-bold uppercase;
+}
+
+.btn-primary {
+  @apply speckled-orange hover:opacity-90 text-white px-8 py-3 rounded-lg text-sm font-bold shadow-lg shadow-orange-500/10 transition-all disabled:opacity-50;
+}
+
+.btn-secondary {
+  @apply text-xs font-medium text-slate-400 hover:text-slate-900 px-6 py-2 transition-colors;
+}
+
+.bottom-tray {
+  @apply border-t border-slate-100 bg-slate-50/50 backdrop-blur-md;
+}
+
+

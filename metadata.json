@@ -1,0 +1,6 @@
+{
+  "name": "V2C-GEM",
+  "description": "Guided creative engine for transforming music into structured visual scenes using the V2C 2.0 specification.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
